@@ -33,6 +33,7 @@ class Home extends CI_Controller
     {
         $data = [
             'title' => 'GoShop | Contact',
+            'categories' => $this->categories->getAllCategories(),
             'titlePage' => 'Contact',
             'contentView' => 'contact'
         ];
