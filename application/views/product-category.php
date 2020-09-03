@@ -78,10 +78,10 @@
                                                 </div>
                                                 <div class="col-md-6">
                                                     <div class="text-right">
-                                                        <a href="#" class="btn btn-sm bg-teal">
+                                                        <a href="<?php echo base_url('home/product_detail/' . $product->id) ?>" class="btn btn-sm bg-teal">
                                                             <i class="fas fa-eye"></i>
                                                         </a>
-                                                        <a href="#" class="btn btn-sm btn-primary">
+                                                        <a href="<?php echo base_url('home/cart/' . $product->id) ?>" class="btn btn-sm btn-primary">
                                                             <i class="fas fa-cart-plus swalDefaultSuccess"></i> Add
                                                         </a>
                                                     </div>
