@@ -89,25 +89,29 @@ class Home extends CI_Controller
         $this->form_validation->set_rules('fullname', 'Fullname', 'required|trim');
         $this->form_validation->set_rules('address', 'Address', 'required|trim');
 
+        $data = [
+            'title' => 'GoShop | Category',
+            'titlePage' => 'Checkout',
+            'user'  => $this->session->fullname,
+            'cart'  =>  $this->_grandTotal(),
+            'contentView' => 'checkout'
+        ];
+
         if ($this->form_validation->run() == false) {
-
-            $data = [
-                'title' => 'GoShop | Category',
-                'titlePage' => 'Checkout',
-                'user'  => $this->session->fullname,
-                'cart'  =>  $this->_grandTotal(),
-                'contentView' => 'checkout'
-            ];
-
             $this->load->view('layout/frontend/wrapper', $data);
         } else {
+
+
             $data = [
                 'fullname'          => $this->input->post('fullname'),
                 'address'           => $this->input->post('address'),
                 'delivery_service'  => $this->input->post('delivery_service'),
+                'cart'              =>  $this->_grandTotal(),
                 'payment_method'    => $this->input->post('payment_method')
             ];
-            $this->session->set_userdata('message', $data['fullname']);
+
+            $this->session->set_userdata('fullname', $data['fullname']);
+            $this->session->set_userdata('cart', $data['cart']);
             $this->cart->destroy();
             redirect('home');
         }

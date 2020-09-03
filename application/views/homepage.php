@@ -3,14 +3,23 @@
     <div class="container">
         <!-- Content Header (Page header) -->
         <div class="content-header">
-            <?php if ($this->session->message) : ?>
+            <?php if ($this->session->cart) : ?>
                 <div class="row">
                     <div class="col-sm-12">
-                        <div class="alert alert-success alert-dismissible">
+                        <div class="alert alert-success">
                             <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
                             <h5><i class="icon fas fa-check"></i> Success!</h5>
-                            Thank you for your order <b><?php echo $this->session->message; ?></b>
-                            <?php $this->session->unset_userdata('message'); ?>
+
+                            Hai <b><?php echo $this->session->fullname; ?></b>,<br />
+
+                            Pesanan berhasil dibuat, dengan nomor invoice #002<br />
+                            Silahkan transfer ke rekening Mandiri (11223344) sejumlah Rp. <?php echo $this->session->cart; ?>
+
+                            <br /><br />
+
+                            Terimakasih atas pesanannya.
+                            <?php echo $this->session->unset_userdata('cart') ?>
+                            <?php echo $this->session->unset_userdata('fullname') ?>
                         </div>
                     </div>
                 </div>

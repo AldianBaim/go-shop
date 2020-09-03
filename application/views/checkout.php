@@ -54,15 +54,12 @@
                         <div class="modal-dialog">
                             <div class="modal-content">
                                 <div class="modal-header">
-                                    <h5 class="modal-title" id="exampleModalLabel">INPUT YOUR PIN PAYMENT METHOD</h5>
+                                    <h5 class="modal-title" id="exampleModalLabel">CHECKOUT</h5>
                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                         <span aria-hidden="true">&times;</span>
                                     </button>
                                 </div>
                                 <div class="modal-body">
-                                    <div class="form-group">
-                                        <input type="password" class="form-control" name="pin">
-                                    </div>
                                     <div class="form-group">
                                         <label for="">Payment Total</label>
                                         <input type="text" class="form-control" value="Rp. <?php echo $cart ?>" disabled>
