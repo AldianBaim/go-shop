@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Sep 03, 2020 at 12:32 PM
+-- Generation Time: Sep 03, 2020 at 12:56 PM
 -- Server version: 8.0.20-0ubuntu0.20.04.1
 -- PHP Version: 7.4.3
 
